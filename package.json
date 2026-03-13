@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Магазин воздушных шаров — 100 шаров за 70 копеек",
   "scripts": {
-    "build": "vite build --config client/vite.config.ts",
+    "build": "vite build --config client/vite.config.ts --root client",
     "start": "node server/index.js",
-    "dev": "concurrently \"node server/index.js\" \"vite --config client/vite.config.ts\""
+    "dev": "concurrently \"node server/index.js\" \"vite --config client/vite.config.ts --root client\""
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
@@ -30,4 +30,3 @@
     "node": ">=18.0.0"
   }
 }
-
