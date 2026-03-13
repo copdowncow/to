@@ -1,3 +1,5 @@
+
+import React from 'react'
 import { useProducts } from '../hooks/useProducts'
 import { ProductCard } from '../components/ProductCard'
 import { Link } from 'react-router-dom'
@@ -28,20 +30,22 @@ export function CatalogPage() {
 
         {/* Floating cart summary */}
         {totalItems > 0 && (
-          <Link to="/cart" style={{
-            display: 'flex', alignItems: 'center', gap: 12,
-            background: 'var(--card)', border: '1px solid var(--border2)',
-            borderRadius: 16, padding: '14px 20px',
-            transition: 'border-color 0.2s',
-          }}
-          onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--accent)')}
-          onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border2)')}
-          >
-            <ShoppingCart size={18} color="var(--accent)" />
-            <div>
-              <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>В корзине</div>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: 14, fontWeight: 800 }}>
-                {totalItems.toLocaleString()} шт · {totalPrice.toFixed(2)} ₽
+          <Link to="/cart">
+            <div style={{
+              display: 'flex', alignItems: 'center', gap: 12,
+              background: 'var(--card)', border: '1px solid var(--border2)',
+              borderRadius: 16, padding: '14px 20px',
+              transition: 'border-color 0.2s', cursor: 'pointer',
+            }}
+            onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => (e.currentTarget.style.borderColor = '#ff4d6d')}
+            onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)')}
+            >
+              <ShoppingCart size={18} color="var(--accent)" />
+              <div>
+                <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>В корзине</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: 14, fontWeight: 800 }}>
+                  {totalItems.toLocaleString()} шт · {totalPrice.toFixed(2)} ₽
+                </div>
               </div>
             </div>
           </Link>
