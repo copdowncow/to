@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { Trash2, Plus, Minus, ArrowRight, ShoppingBag } from 'lucide-react'
 import { useCart } from '../hooks/useCart'
