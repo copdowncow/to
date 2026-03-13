@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Zap, Shield, Truck, Star } from 'lucide-react'
 import { Balloon } from '../components/Balloon'
