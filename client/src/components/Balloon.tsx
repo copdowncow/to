@@ -1,3 +1,4 @@
+import React from 'react'
 interface BalloonProps {
   color: string
   size?: number
