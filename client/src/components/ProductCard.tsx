@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react'
 import { Minus, Plus, ShoppingCart } from 'lucide-react'
 import toast from 'react-hot-toast'
