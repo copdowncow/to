@@ -1,22 +1,33 @@
 {
-  "name": "balloon-shop-client",
+  "name": "balloon-shop",
   "version": "1.0.0",
-  "private": true,
+  "description": "Магазин воздушных шаров — 100 шаров за 70 копеек",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build --config client/vite.config.ts",
+    "start": "node server/index.js",
+    "dev": "concurrently \"node server/index.js\" \"vite --config client/vite.config.ts\""
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react": "^4.2.0",
+    "concurrently": "^8.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
     "lucide-react": "^0.383.0",
+    "morgan": "^1.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.20.0",
     "typescript": "^5.2.0",
     "vite": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
+
